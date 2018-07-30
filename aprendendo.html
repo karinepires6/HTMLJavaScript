@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			background-color: powderblue;
+		}
+		h1 {
+			color: blue;
+		}
+	p    {color: red;}
+	.btnteste {background-color: red;}
+	</style>
+</head>
+<body>
+
+<h1>Aprendendo HTML e JavaScript</h1>
+<p>Data de Nascimento</p>
+<input id="dataN"></input>
+<button id="myBtn" class='btnteste' onclick="myfunction()">Enviar</button>
+</p>
+Saída: <p id="demo"></p>
+
+<script>
+	function myfunction(){
+		var x = document.getElementById("myBtn");
+		var y = document.getElementById("dataN").value;
+		if(y.length === 0){
+			window.alert("Digite a data de nascimento")
+		} else {
+			x.disabled = true;
+			document.getElementById("demo").innerHTML = y;
+		}
+	}
+</script>
+
+</body>
+</html>
